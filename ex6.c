@@ -30,7 +30,7 @@ void *sum_partial(void *args)
     /*
         mutex, primitive de synchronization permet a un seul thread d'acceder a une ressource critique
         a la fois, la fonction pthread_mutex_lock permet d'acquerir le mutex qui nous permet d'ajouter
-        notre somme partiel a la somme total, si le mutex est encore d'utilisation par un autre thread
+        notre somme partiel a la somme total, si le mutex est en cours d'utilisation par un autre thread
         on attend jusqu'a sa liberation puis on le saisie. 
     */
     pthread_mutex_lock(&lock);
