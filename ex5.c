@@ -45,7 +45,7 @@ int main(){
         pthread_create(&threads[i], NULL, taskFunction, (void *)&tasks[i]);
     }
 
-    //Envoyer une demande d'annulation et attendre la fin de l'execution a tous les threads, 
+    //Envoyer une demande d'annulation et attendre la fin de l'execution de tous les threads, 
     for(i = 0 ; i < NUM_TASKS ; i++){
         pthread_cancel(threads[i]);
         pthread_join(threads[i],NULL);
